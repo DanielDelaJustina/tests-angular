@@ -3,7 +3,7 @@ import { TodoService } from './todo.service';
 import { OnInit } from '@angular/core';
 
 export class TodosComponent implements OnInit {
-  todos: any[] = [];
+  todos: any = [];
   message;
 
   constructor(private service: TodoService) {}
@@ -14,7 +14,8 @@ export class TodosComponent implements OnInit {
 
   add() {
     const newTodo = { title: '... ' };
-    this.service.add(newTodo).subscribe(
+    this.service.add(newTodo).
+    subscribe(
       t => this.todos.push(t),
       err => this.message = err);
   }

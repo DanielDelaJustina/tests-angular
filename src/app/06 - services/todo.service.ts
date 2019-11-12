@@ -8,14 +8,14 @@ export class TodoService {
   }
 
   add(todo) {
-    return this.http.post('...', todo).toPromise();
+    return this.http.post('...', todo);
   }
 
   getTodos() {
-    return this.http.get('...').pipe((res) => res);
+    return this.http.get('...');
   }
 
   delete(id) {
-    return this.http.delete('...').toPromise();
+    return this.http.delete('...');
   }
 }
